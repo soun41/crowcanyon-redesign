@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.css">
+    <link rel="stylesheet" href="assets/styles/css/base.css">
+    <link rel="stylesheet" href="assets/styles/css/style.css">
+    <link rel="stylesheet" href="assets/styles/css/design-tokens.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/script.js" defer></script>
+    <title>crowcanyon_project</title>
+</head>
+<body>
+    <header class="header">        
+        <div class="header-dim" aria-hidden="true"></div>
+
+        <div class="gnb">
+            <div class="gnb-inner">
+                <div class="gnb-left">
+                    <div class="logo">
+                        <a href="#" class="link-block">
+                            <span class="sr-only">CROWCANYON</span>
+                        </a>
+                    </div>
+                        
+                    <nav class="gnb-nav">
+                        
+                        <!-- MO전용 로그인/회원가입 -->
+                        <div class="gnb-mobile-auth">
+                            <ul class="auth-menu">
+                                <li>
+                                    <a href="login.html">
+                                        <span>로그인</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="signup.html">
+                                        <span>회원가입</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <button type="button" class="gnb-mobile-close">
+                                <span class="sr-only">close</span>
+                            </button>
+                        </div>
+                        
+                        <ul class="gnb-1depth">
+                            <li class="gnb-item">
+                                <a href="brand.html" class="link-block gnb-2depth-btn">
+                                    <span>BRAND</span>
+                                </a>
+
+                                <ul class="gnb-2depth">
+                                    <li>
+                                        <a href="story.html" class="link-block is-disabled">
+                                            <span>STORY</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="contact.html" class="link-block is-disabled">
+                                            <span>CONTACT</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="stockist.html" class="link-block is-disabled">
+                                            <span>STOCKIST</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="gnb-item">
+                                <a href="shop.html" class="link-block gnb-2depth-btn">
+                                    <span>SHOP</span>
+                                </a>
+
+                                <ul class="gnb-2depth">
+                                    <li>
+                                        <a href="holday-gift.html" class="link-block is-disabled">
+                                            <span>HOLIDAY GIFT</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="product.html" class="link-block is-disabled">
+                                            <span>PRODUCT</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="collection.html" class="link-block is-disabled">
+                                            <span>COLLECTION</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="recommend.html" class="link-block is-disabled">
+                                            <span>RECOMMEND</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="gnb-item">
+                                <a href="journal.html" class="link-block gnb-2depth-btn">
+                                    <span>JOURNAL</span>
+                                </a>
+
+                                <ul class="gnb-2depth">
+                                    <li>
+                                        <a href="magazine.html" class="link-block is-disabled">
+                                            <span>MAGAZINE</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="mdpick.html" class="link-block is-disabled">
+                                            <span>MD's PiCK</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="collaboration.html" class="link-block is-disabled">
+                                            <span>COLLABORATION</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="gnb-item">
+                                <a href="community.html" class="link-block gnb-2depth-btn">
+                                    <span>COMMUNITY</span>
+                                </a>
+
+                                <ul class="gnb-2depth">
+                                    <li>
+                                        <a href="notice.html" class="link-block is-disabled">
+                                            <span>NOTICE</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="review.html" class="link-block is-disabled">
+                                            <span>REVIEW</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="faqlist.html" class="link-block is-disabled">
+                                    <span>고객센터</span>
+                                </a>
+                            </li>
+                        </ul> 
+    
+                    </nav>
+                </div>
+                <div class="gnb-right">
+                    <form class="search-form">
+                        <input type="search" placeholder="검색어를 입력해 주세요.">
+                        
+                        <button type="submit" class="search">
+                            <span class="sr-only">검색</span>
+                        </button>
+                    </form>
+    
+                    <a href="myinfo.html" class="myinfo">
+                        <span class="sr-only">내 정보</span>
+                    </a>
+    
+                    <a href="cart.html" class="cart">
+                        <span class="sr-only">장바구니</span>
+                    </a>
+
+                    <button type="button" class="gnb-mobile-menu">
+                        <span class="sr-only">메뉴</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-dim" aria-hidden="true"></div>
+    
+    <main>
+        <section class="main-visual">
+            <div class="swiper" data-type="main">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="new.html" class="visual-link is-disabled">
+                            <picture>
+                                <source srcset="assets/images/img/visual-bg-1.jpg" media="(min-width: 1024px)">
+                                <img class="visual-bg" src="assets/images/img/mo-visual-bg-1.jpg" alt="새로운 무드">
+                            </picture>
+                            
+                            <span class="visual-title">
+                                <span>신상으로 만나는</span>
+                                <span class="break">새로운 무드</span>
+                            </span>
+                            
+                            <span class="visual-desc">크로우캐년, 테이블 위 감성 리뉴얼</span>
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <a href="pop-up.html" class="visual-link is-disabled">
+                            <picture>
+                                <source srcset="assets/images/img/visual-bg-2.jpg" media="(min-width: 1024px)">
+                                <img class="visual-bg" src="assets/images/img/mo-visual-bg-2.jpg" alt="새로운 무드">
+                            </picture>
+
+                            <span class="visual-title">
+                                <span>29HOME 성수</span>
+                                <span class="break">팝업스토어 오픈!</span>
+                            </span>
+                            
+                            <span class="visual-desc">오직 성수에서만 크로우캐년 한정 컬렉션</span>
+                        </a>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <a href="homepage-only.html" class="visual-link is-disabled">
+                            <picture>
+                                <source srcset="assets/images/img/visual-bg-3.jpg" media="(min-width: 1024px)">
+                                <img class="visual-bg" src="assets/images/img/mo-visual-bg-3.jpg" alt="새로운 무드">
+                            </picture>
+
+                            <span class="visual-title">
+                                <span>지금, 공식몰에서만</span>
+                                <span class="break">만날 수 있습니다.</span>
+                            </span>
+                            
+                            <span class="visual-desc">크로우캐년의 감성을 가장 먼저 만나는 곳</span>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="swiper-button-prev" type="button" aria-label="이전"></button>
+                <button class="swiper-button-next" type="button" aria-label="다음"></button>
+
+                <div class="swiper-pagination" aria-hidden="true"></div>
+            </div>
+
+        </section>
+
+        <section class="category">
+            <div class="swiper" data-type="category">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="mug.html" class="category-link is-disabled">
+                            <img src="assets/images/img/product-1.png" class="category-img" alt="머그">
+                            <span>머그</span>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="tumbler.html" class="category-link is-disabled">
+                            <img src="assets/images/img/product-2.png" class="category-img" alt="텀블러">
+                            <span>텀블러</span>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="bowl.html" class="category-link is-disabled">
+                            <img src="assets/images/img/product-3.png" class="category-img" alt="보울">
+                            <span>보울</span>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="plate.html" class="category-link is-disabled">
+                            <img src="assets/images/img/product-4.png" class="category-img" alt="플레이트">
+                            <span>플레이트</span>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="kitchen-ware.html" class="category-link is-disabled">
+                            <img src="assets/images/img/product-5.png" class="category-img" alt="키친웨어">
+                            <span>키친웨어</span>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="gift-set.html" class="category-link is-disabled">
+                            <img src="assets/images/img/product-6.png" class="category-img" alt="선물세트">
+                            <span>선물세트</span>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="life.html" class="category-link is-disabled">
+                            <img src="assets/images/img/product-7.png" class="category-img" alt="라이프">
+                            <span>라이프</span>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="golden-rabbit.html" class="category-link is-disabled">
+                            <img src="assets/images/img/product-8.png" class="category-img" alt="골든래빗">
+                            <span>골든래빗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="new">
+            <h2 class="new-title">NEW! 신상품</h2>
+
+            <div class="swiper" data-type="new">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="new-area">
+                            <img src="assets/images/img/new-area-1.jpg" alt="마블텀블러_new">
+
+                            <button type="button" class="btn-new-view" data-title="마블 스텐 텀블러 : 블루" 
+                            data-desc="디자인, 실용성, 기능성까지 모두 갖춘 아이템" data-img="assets/images/img/detail-area-1-1.png"
+                            data-link="products/mug-blue.html">
+                                <span class="sr-only">상세보기</span>
+                            </button>
+
+                            <button type="button" class="btn-new-view" data-title="마블 스텐 텀블러 : 옐로우" 
+                            data-desc="디자인, 실용성, 기능성까지 모두 갖춘 아이템" data-img="assets/images/img/detail-area-1-2.png"
+                            data-link="products/mug-yellow.html">
+                                <span class="sr-only">상세보기</span>
+                            </button>
+
+                            <button type="button" class="btn-new-view" data-title="마블 스텐 텀블러 : 블랙" 
+                            data-desc="디자인, 실용성, 기능성까지 모두 갖춘 아이템" data-img="assets/images/img/detail-area-1-3.png"
+                            data-link="products/mug-black.html">
+                                <span class="sr-only">상세보기</span>
+                            </button>
+                        </div>
+
+                        <div class="detail-area">
+                            <a href="products/mug-blue.html" class="detail-link is-disabled">
+                                <div class="detail-img">
+                                    <img src="assets/images/img/detail-area-1-1.png" alt="마블스텐텀블러_핑크">
+                                </div>
+
+                                <div class="detail-text-box">
+                                    <span class="detail-title">마블 스텐 텀블러 : 블루</span>
+                                    <span class="detail-desc">디자인, 실용성, 기능성까지 모두 갖춘 아이템</span>
+    
+                                    <span class="more-btn-common new-viewmore">View more</span>
+                                </div>
+                            </a>
+
+                            <button type="button" class="detail-close">
+                                <span class="sr-only">close</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="new-area">
+                            <img src="assets/images/img/new-area-2.jpg" alt="헬로키티_new">
+
+                            <button type="button" class="btn-new-view" data-title="CCH x Hello kitty : 머그" 
+                            data-desc="귀여움과 클래식이 공존하는 특별한 리미티드 에디션" data-img="assets/images/img/detail-area-2-2.png"
+                            data-link="products/Hello-kitty-mug.html">
+                                <span class="sr-only">상세보기</span>
+                            </button>
+
+                            <button type="button" class="btn-new-view" data-title="CCH x Hello kitty : 요거트보울" 
+                            data-desc="귀여움과 클래식이 공존하는 특별한 리미티드 에디션" data-img="assets/images/img/detail-area-2-1.png"
+                            data-link="products/Hello-kitty-bowl.html">
+                                <span class="sr-only">상세보기</span>
+                            </button>
+                        </div>
+
+                        <div class="detail-area">
+                            <a href="products/Hello-kitty-mug.html" class="detail-link is-disabled">
+                                <div class="detail-img">
+                                    <img src="assets/images/img/detail-area-2-2.png" alt="헬로키티_new">
+                                </div>
+
+                                <div class="detail-text-box">
+                                    <span class="detail-title">CCH x Hello Kitty 머그</span>
+                                    <span class="detail-desc">귀여움과 클래식이 공존하는 특별한 리미티드 에디션</span>
+
+                                    <span class="more-btn-common new-viewmore">View more</span>
+                                </div>
+                            </a>
+
+                            <button type="button" class="detail-close">
+                                <span class="sr-only">close</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="md">
+            <div class="md-text-area">
+                <span class="md-desc-logo">크로우캐년</span>
+
+                <h2 class="md-title">MD's Pick</h2>
+
+                <div>
+                    <span class="md-desc">MD가 직접 골라 담은 셀렉션</span>
+
+                    <a href="mdpick.html" class="more-btn-common is-disabled">View more</a>
+                </div>
+            </div>
+            <div class="md-slide-area">
+                <div class="swiper" data-type="md">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-bg="1">
+                            <a href="one-spoon.html" class="is-disabled">
+                                <span class="md-bg" aria-hidden="true"></span>
+    
+                                <div class="md-detail-area">
+                                    <span class="md-slide-desc">MD가 직접 골라 담은 베스트 셀렉션, BEST SELECTION</span>
+    
+                                    <span class="md-slide-desc">Best 1.</span>
+    
+                                    <span class="md-slide-title">매일 담는 한 스푼의 행복</span>
+                                </div>
+                                <span class="more-btn-common">View more</span>
+                            </a>
+                        </div>
+    
+                        <div class="swiper-slide" data-bg="2">
+                            <a href="gift-set.html" class="is-disabled">
+                                <span class="md-bg" aria-hidden="true"></span>
+    
+                                <div class="md-detail-area">
+                                    <span class="md-slide-desc">MD가 직접 골라 담은 베스트 셀렉션, BEST SELECTION</span>
+                                    
+                                    <span class="md-slide-desc">Best 2.</span>
+    
+                                    <span class="md-slide-title">센스 있는 선물 추천 템! : 세트</span>
+                                </div>
+    
+                                <span class="more-btn-common">View more</span>
+                            </a>
+                        </div>
+    
+                        <div class="swiper-slide" data-bg="3">
+                            <a href="golden-rabbit.html" class="is-disabled">
+                                <span class="md-bg" aria-hidden="true"></span>
+    
+                                <div class="md-detail-area">
+                                    <span class="md-slide-desc">MD가 직접 골라 담은 베스트 셀렉션, BEST SELECTION</span>
+    
+                                    <span class="md-slide-desc">Best 3.</span>
+    
+                                    <span class="md-slide-title">Only 공홈, 골든래빗</span>
+                                </div>
+    
+                                <span class="more-btn-common">View more</span>
+                            </a>
+                        </div>
+    
+                        <div class="swiper-slide" data-bg="4">
+                            <a href="best.html" class="is-disabled">
+                                <span class="md-bg" aria-hidden="true"></span>
+    
+                                <div class="md-detail-area">
+                                    <span class="md-slide-desc">MD가 직접 골라 담은 베스트 셀렉션, BEST SELECTION</span>
+    
+                                    <span class="md-slide-desc">Best 4.</span>
+                                    
+                                    <span class="md-slide-title">나만의 테이블을 완성해보세요!</span>
+                                </div>
+    
+                                <span class="more-btn-common">View more</span>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-pagination" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="community">
+            <h2 class="community-title">COMMUNITY</h2>
+            
+            <div class="community-wrap">
+                <div>
+                    <a href="store-information.html" class="is-disabled">
+                        <img src="assets/images/icons/ic-store.svg" class="community-img" alt="매장 안내">
+                        <div>
+                            <span class="community-sub-title">
+                                매장 안내
+                            </span>
+
+                            <p class="p-margin-none community-desc">
+                                가까운 매장을 쉽고 빠르게 찾아보세요.
+                            </p>
+                        </div>
+
+                    </a>
+                </div>
+
+                <div>
+                    <a href="instagram.html" class="is-disabled">
+                        <img src="assets/images/icons/ic-insta.svg" class="community-img" alt="인스타">
+                        <div>
+                            <span class="community-sub-title">
+                                인스타
+                            </span>
+
+                            <p class="p-margin-none community-desc">
+                                우리의 순간을 사진으로 만나보세요.
+                            </p>
+                        </div>
+
+                    </a>
+                </div>
+
+                <div>
+                    <a href="faqlist.html" class="is-disabled">
+                        <img src="assets/images/icons/ic-contact.svg" class="community-img" alt="1:1문의">
+                        
+                        <div>
+                            <span class="community-sub-title">
+                                1:1 문의
+                            </span>
+
+                            <p class="p-margin-none community-desc">
+                                무엇이든 편하게 물어보세요.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="event">
+            <div class="swiper" data-type="event">
+                <div class="event-title-wrap">
+                    <h2 class="event_title">EVENT</h2>
+                    <a href="event.html" class="more-btn-common is-disabled">View more</a>
+                </div>
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="event/beyond-the-table.html" class="event-link is-disabled">
+                            <img src="assets/images/img/event-img-1.jpg" class="event-img" alt="테이블 너머의 순간들">
+                            <span class="ellipsis">테이블 너머의 순간들</span>
+                            <span class="link-block">2025.04.10</span>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="event/contide-tulear.html" class="event-link is-disabled">
+                            <img src="assets/images/img/event-img-2.jpg" class="event-img" alt="꽁티드 툴레아">
+                            <span class="ellipsis">크로우캐년 in 꽁티드 툴레아</span>
+                            <span class="link-block">2025.05.09</span>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="event/beyond-the-table.html" class="event-link is-disabled">
+                            <img src="assets/images/img/event-img-3.jpg" class="event-img" alt="Beyond the table">
+                            <span class="ellipsis">Beyond the table</span>
+                            <span class="link-block">2025.05.25</span>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="event/snock-water-collaboration.html" class="event-link is-disabled">
+                            <img src="assets/images/img/event-img-4.jpg" class="event-img" alt="스녹워터 X 크로우캐년">
+                            <span class="ellipsis">스녹워터 X 크로우캐년</span>
+                            <span class="link-block">2025.05.25</span>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="event/beyond-the-table.html" class="event-link is-disabled">
+                            <img src="assets/images/img/event-img-5.jpg" class="event-img" alt="테이블 너머의 순간들">
+                            <span class="ellipsis">테이블 너머의 순간들</span>
+                            <span class="link-block">2025.06.25</span>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="event/miss-chief-collaboration.html" class="event-link is-disabled">
+                            <img src="assets/images/img/event-img-6.jpg" class="event-img" alt="미스치프X크로우캐년 한정판 콜라보제품 출시!">
+                            <span class="ellipsis">미스치프X크로우캐년 한정판 콜라보 제품 출시!</span>
+                            <span class="link-block">2025.07.20</span>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="event/snock-water-collaboration.html" class="event-link is-disabled">
+                            <img src="assets/images/img/event-img-7.jpg" class="event-img" alt="스녹워터X크로우캐년 GS25 입점 기념 구매 이벤트!">
+                            <span class="ellipsis">스녹워터X크로우캐년 GS25 입점 기념 구매 이벤트!</span>
+                            <span class="link-block">2025.07.29</span>
+                        </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                        <a href="event/thailand.html" class="event-link is-disabled">
+                            <img src="assets/images/img/event-img-8.jpg" class="event-img" alt="CHRO CANYON IN THAILAND">
+                            <span class="ellipsis">CHRO CANYON IN THAILAND</span>
+                            <span class="link-block">2025.09.19</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-info-box">
+            <div class="info1-box">
+                <div class="logo">
+                    <a href="brand.html" class="link-block is-disabled">
+                        <span class="sr-only">CROWCANYON</span>
+                    </a>
+    
+                    <ul class="footer-menu">
+                        <li>
+                            <a href="brandstory.html" class="is-disabled">
+                                <span>회사소개</span>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="service-agreement.html" class="is-disabled">
+                                <span>이용약관</span>
+                            </a>
+                        </li>   
+    
+                        <li>
+                            <a href="service-private.html" class="is-disabled">
+                                <span>개인정보처리방침</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="faqlist.html" class="is-disabled">
+                                <span>고객센터</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button class="family-site" type="button" aria-label="패밀리사이트"></button>
+            </div>
+    
+            <div class="info2-box">
+                <span>상호:스코프 컴퍼니 주식회사</span>
+    
+                <span>대표:설혜윤</span>
+    
+                <span>전화:02-336-5288</span>
+    
+                <span>사업자등록번호:347-81-13101</span>
+    
+                <span>통신판매업신고:2024-서울서대문구-0870</span>
+    
+                <span>주소:서울 서대문구 연희로5길 58 스코프컴퍼니</span>
+    
+                <span>개인정보관리자:서동순</span>
+            </div>
+    
+            <div class="info3-box">
+                <p>
+                    당사의 상품 사진 등의 모든 저작물은 저작권법 및 스코프 컴퍼니 이용약관 제22조에 따라 보호를 받습니다. 
+                    상업적 용도의 무단 수정, 재배포, 이용 등을 금지합니다.<br> 
+                    본 웹사이트에 게시된이메일 주소가 전자우편 
+                    수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며, 이를 위반 시 
+                    정보통신망법에 의해 법적 조치를 취할 수 있습니다.<br> 
+                    이메일을 기술적 장치를 사용하여 무단으로 수집, 
+                    판매, 유통하거나 이를 이용한 자는 정보통신망 이용촉진 및 종보보호 등에 관한 법률, 
+                    제 50조의 2조 규정에 의하여 1천만읜 이하의 벌급형에 처해집니다. <br> 
+                    *정보통신망법률 제50조의 2(전자우편주소의 무단 수집행위 등 금지)
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
