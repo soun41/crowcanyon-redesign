@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // autoplay: { delay : 3000 },
                 // speed : 500,
                 spaceBetween: 16,
-                slidesPerView : 1,
+                // slidesPerView : 1,
                 
                 breakpoints: {
                     768: {

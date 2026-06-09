@@ -1,19 +1,6 @@
 html {
-    font-size: 16px;
     scrollbar-gutter: stable;
 
-}
-
-@media (min-width : 768px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-@media (min-width : 1024px) {
-    html {
-        font-size: 20px;
-    }
 }
 
 body.lock-scroll, 
@@ -60,6 +47,7 @@ html.lock-scroll {
 
 .gnb-inner {
     justify-content: space-between; 
+    height: 56px;
 }
 
 
@@ -466,6 +454,7 @@ h2 {
 
 @media (min-width : 1024px) {
     .visual-bg { 
+        min-height: 645px;
         max-height: 880px;
         aspect-ratio: 24/11;
     }
@@ -501,9 +490,7 @@ h2 {
     .category {
         margin: 70px var(--mo-full-margin) 0;
     }
-    .category .swiper {
-        width: 1280px;
-    }
+
 }
 @media (min-width : 1320px) {
     .category {
@@ -577,7 +564,7 @@ h2 {
 
     width: 94%;
     height: 100px;
-    background-color: rgba(2550, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: var(--radius-10);
 
     position: absolute;
@@ -618,7 +605,6 @@ h2 {
 .detail-close {
     position: absolute;
     padding: 6px;
-    border-radius: 50%;
     box-sizing: border-box;
     top: 4px;
     right: 4px;
@@ -664,7 +650,7 @@ h2 {
 @media (min-width: 768px) {
     .new .swiper-slide {
         display: flex;
-        gap: 20px;
+        gap: 16px;
     }
     .new-area {
         flex-basis: 50%;
@@ -867,16 +853,19 @@ h2 {
     .md {
         display: flex;
         position: relative;
+
     }
 
     .md-text-area {
-        flex:  0 0 30%;
+        width: 240px;
+        flex-shrink: 0;
     }
 
     .md-slide-area {
         flex: 1;
         min-width: 0;
     }
+    
     .md .swiper {
         position: inherit;
     }
@@ -945,7 +934,6 @@ h2 {
     background-color: var(--color-background);
     border-radius: var(--radius-20);
 
-    text-align: center;
     width: 100%;
 }
 
@@ -953,9 +941,7 @@ h2 {
    height: 100%; 
    padding: 32px;
    display: flex;
-   flex-direction: column;
    gap: 12px;
-   text-align: center;
    align-items: center;
 }
 
@@ -977,6 +963,7 @@ h2 {
 }
 
 @media (min-width : 1024px) {
+
     .community-wrap {
         flex-direction: row;
     }
