@@ -22,7 +22,6 @@
 
     /* MO 폰트 사이즈 : 기준 16px */
     --mo-display1:   2.5rem;      /* 40px */
-    --mo-display2:   2rem;        /* 32px */
     --mo-headline:   1.75rem;     /* 28px */
     --mo-title1:     1.25rem;     /* 20px */
     --mo-title2:     1rem;        /* 16px */
@@ -35,6 +34,15 @@
     --mo-caption1:   0.75rem;     /* 12px */
 
     --mo-btn:        0.8125rem;   /* 13px */
+
+
+    /* 폰트 사이즈 수정 본 */
+    --textDisplay1: 2rem;       /* 32px */
+    --textSubtitle2 : 1rem;     /* 16px */
+
+    /* line-height 수정본 */
+    --lineHeight32: 2.625rem;  /* 42px */
+    --lineHeight16: 1.5rem;    /* 24px */
 
     /* font-weight */
     --font-weight-regular: 400;

@@ -135,14 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
     
     /* ========== main-visual 영역 JS ========== */
     const mainTitle = document.querySelectorAll(".visual-title");
-    const mainDesc = document.querySelectorAll(".visual-desc");
+    const mainSubTitle = document.querySelectorAll(".visual-subtitle");
     const mainColorClasses = ["slide-color-1", "slide-color-2", "slide-color-3"];
     
     mainTitle.forEach((slide, index) => {
         slide.classList.add(mainColorClasses[index]);
     });
 
-    mainDesc.forEach((slide, index) => {
+    mainSubTitle.forEach((slide, index) => {
         slide.classList.add(mainColorClasses[index]);
     });
 
@@ -269,8 +269,8 @@ document.addEventListener("DOMContentLoaded", () => {
             option = {
                 ...baseOption,
                 loop: true,
-                autoplay: { delay : 3000 },
-                speed : 500,
+                // autoplay: { delay : 3000 },
+                // speed : 500,
                 pagination : { el: el.querySelector(".swiper-pagination") }
             };
         }
@@ -313,9 +313,9 @@ document.addEventListener("DOMContentLoaded", () => {
             option = {
                 ...baseOption,
                 loop: true,
+                spaceBetween: 16,
                 // autoplay: { delay : 3000 },
                 // speed : 500,
-                spaceBetween: 16,
                 // slidesPerView : 1,
                 
                 breakpoints: {

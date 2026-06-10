@@ -343,24 +343,26 @@ h2 {
     object-fit: cover;
 }
 
-.visual-title, .visual-desc {
-    text-align: left;
+.visual-text {
     width: 100%;
     padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    bottom: 100px;
 }
 
 .visual-title {
     display: flex;
     flex-direction: column;
-    bottom: 100px;
     
-    font-size: var(--mo-display2);
+    font-size: var(--textDisplay1);
     font-weight: var(--font-weight-semibold);
-    line-height: var(--line-32);
+    line-height: var(--lineHeight32);
 }
 
 .slide-color-1 { 
@@ -379,10 +381,9 @@ h2 {
 }
 
 
-.visual-desc {
-    font-size: var(--mo-title2);
-    line-height: var(--line-16);
-    bottom: 72px;
+.visual-subtitle {
+    font-size: var(--textSubtitle2);
+    line-height: var(--lineHeight16);
 }
 
 .main-visual .swiper > button {
@@ -441,12 +442,11 @@ h2 {
         font-size: var(--mo-display1);
         line-height: var(--line-40);
 
-
     }
 
-    .visual-desc {
+    .visual-subtitle {
         text-align: center;
-        font-size: var(--mo-title1);
+        font-size: var(--textSubtitle2);
         line-height: var(--line-20);
     }
 
