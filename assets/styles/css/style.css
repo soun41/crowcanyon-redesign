@@ -312,9 +312,16 @@ html.lock-scroll {
 h2 {
     margin-top: 0;
     margin-bottom: var(--mo-title-margin);
-    font-size: var(--mo-headline);
+
     font-weight: var(--font-weight-semibold);
-    line-height: var(--line-28);
+    font-size: var(--textTitle1);
+    line-height: var(--lineHeight140);
+}
+
+@media (min-width: 1024px) {
+    .h2 { 
+        line-height: var(--lineHeight130);
+    }
 }
 
 /* -------------------- View more 공통 영역 -------------------- */
@@ -346,14 +353,13 @@ h2 {
 .visual-text {
     width: 100%;
     padding: 0 20px;
-
     display: flex;
     flex-direction: column;
     gap: 8px;
     
     position: absolute;
     left: 0;
-    bottom: 100px;
+    bottom: 76px;
 }
 
 .visual-title {
@@ -361,8 +367,8 @@ h2 {
     flex-direction: column;
     
     font-size: var(--textDisplay1);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--lineHeight32);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--lineHeight130);
 }
 
 .slide-color-1 { 
@@ -383,39 +389,38 @@ h2 {
 
 .visual-subtitle {
     font-size: var(--textSubtitle2);
-    line-height: var(--lineHeight16);
+    line-height: var(--lineHeight140);
+    font-weight: var(--font-weight-semibold);
 }
 
-.main-visual .swiper > button {
+.main-visual > .swiper > button {
     display: none;
+    
+    width: 45px;
+    height: 45px;
+    opacity: 0.6;
 }
 
-.main-visual .swiper-button-prev {
-    width: 50px;
-    height: 50px;
+.main-visual > .swiper > button:hover {
+    opacity: 1;
+}
+
+.main-visual > .swiper > .swiper-button-prev {
     background: url(../../images/icons/ic-prev.svg) center/contain no-repeat;
-
-    position: absolute;
-    left: 20px;
-    top: 50%;
+    margin-left: 20px;
 }
 
-.main-visual .swiper-button-next {
-    width: 50px;
-    height: 50px;
+.main-visual > .swiper > .swiper-button-next {
     background: url(../../images/icons/ic-next.svg) center/contain no-repeat;
-
-    position: absolute;
-    right: 20px;
-    top: 50%;
+    margin-right: 20px;
 }
 
 .main-visual > .swiper > .swiper-pagination {
     padding: 0 20px;
     bottom: 32px;
     max-width: 1520px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 200px;
 }
 
 .main-visual > .swiper > .swiper-pagination > .swiper-pagination-bullet {
@@ -432,35 +437,39 @@ h2 {
 @media (min-width: 674px) {
     .visual-title {
         flex-direction: row;
-        gap: 7px;
+        gap: 12px;
     }
 }
 
-@media (min-width: 768px) {
-    .visual-title {
-        justify-content: center;
-        font-size: var(--mo-display1);
-        line-height: var(--line-40);
+@media (min-width: 1024px) {
 
-    }
-
-    .visual-subtitle {
-        text-align: center;
-        font-size: var(--textSubtitle2);
-        line-height: var(--line-20);
-    }
-
-}
-
-@media (min-width : 1024px) {
     .visual-bg { 
         min-height: 645px;
         max-height: 880px;
         aspect-ratio: 24/11;
     }
-    
-}
 
+    .visual-text {
+        left: 200px;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    .visual-title {
+        gap: 12px;
+    }
+
+    .visual-subtitle {
+        font-size: var(--textSubtitle2);
+        line-height: var(--line-20);
+    }
+
+    .main-visual > .swiper > button {
+        display: block;
+    }
+
+
+}
 
 
 /* ==================== categpry 영역 ==================== */
@@ -481,8 +490,8 @@ h2 {
 }
 
 .category-link > span {
-    font-size: var(--mo-body2);
-    line-height: var(--line-14);
+    font-size: var(--textSubtitle3);
+    line-height: var(--lineHeight145);
     padding: 14px 0;
 }
 
@@ -490,6 +499,10 @@ h2 {
     .category {
         margin: 70px var(--mo-full-margin) 0;
     }
+
+    .category-link > span {
+        line-height: var(--lineHeight140);
+    }   
 
 }
 @media (min-width : 1320px) {
@@ -593,13 +606,15 @@ h2 {
 }
 
 .detail-title {
-    font-size: var(--mo-title2);
+    font-size: var(--textSubtitle2);
     font-weight: var(--font-weight-semibold);
-    line-height: var(--line-16);
+    line-height: var(--lineHeight140);
 }
 
 .detail-desc {
     display: none;
+    font-size: var(--textBody1);
+    line-height: var(--lineHeight145);
 }
 
 .detail-close {
@@ -687,10 +702,6 @@ h2 {
         gap: 4px;
     }
 
-    .detail-title {
-        font-size: var(--mo-title1);
-        line-height: var(--line-20);
-    }
     .detail-desc {
         display: block;
     }
@@ -709,6 +720,14 @@ h2 {
     .new > .swiper > .swiper-pagination {
         margin-top: 16px;
     }
+}
+
+@media (min-width: 1024px) {
+    .detail-desc {
+    font-size: var(--textBody1);
+    line-height: var(--lineHeight140);
+    }
+
 }
 
 

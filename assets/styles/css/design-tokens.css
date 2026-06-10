@@ -38,11 +38,19 @@
 
     /* 폰트 사이즈 수정 본 */
     --textDisplay1: 2rem;       /* 32px */
-    --textSubtitle2 : 1rem;     /* 16px */
+    
+    --textTitle1: 1.75rem;       /* 28px */
+
+    --textSubtitle2: 1rem;     /* 16px */
+    --textSubtitle3: 0.875rem;      /* 14px */
+
+    --textBody1: 0.9375rem;     /* 15px */
+
 
     /* line-height 수정본 */
-    --lineHeight32: 2.625rem;  /* 42px */
-    --lineHeight16: 1.5rem;    /* 24px */
+    --lineHeight130: 130%;
+    --lineHeight140: 140%;
+    --lineHeight145: 145%;
 
     /* font-weight */
     --font-weight-regular: 400;
@@ -73,4 +81,32 @@
     --mo-title-margin: 24px;
     --mo-section-margin: 70px;
     
+}
+
+
+@media (min-width: 768px) {
+    :root {
+
+        /* 폰트 사이즈 수정 본 */
+        --textDisplay1: 3rem;           /* 48px */
+        --textTitle1: 2rem;       /* 28px */
+        --textSubtitle2: 1.125rem;      /* 18px */
+    }
+}
+
+
+@media (min-width: 1024px) {
+    :root {
+
+        /* 폰트 사이즈 수정 본 */
+        --textDisplay1: 4rem;           /* 64px */
+        --textTitle1: 2.5rem;       /* 40px */
+
+        --textSubtitle2: 1.5rem;      /* 24px */
+        --textSubtitle3 : 1.125rem;      /* 18px */
+        --textBody1: 1rem;     /* 16px */
+
+
+
+    }
 }
