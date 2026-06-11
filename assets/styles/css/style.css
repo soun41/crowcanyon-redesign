@@ -90,8 +90,8 @@ html.lock-scroll {
 .auth-menu {
     display: flex;
     gap: 16px;
-    font-size: var(--mo-title2);
-    line-height: var(--line-16);
+    font-size: var(--textButton2);
+    line-height: var(--lineHeight145);
 }
 
 .gnb-mobile-close {
@@ -121,8 +121,10 @@ html.lock-scroll {
     justify-content: space-between;
     align-items: center;
 
+    font-size: var(--textButton1);
     font-weight: var(--font-weight-semibold);
 }
+
 
 .gnb-2depth-btn::after {
     display: block;
@@ -326,7 +328,7 @@ h2 {
 
 /* -------------------- View more 공통 영역 -------------------- */
 .more-btn-common {
-    font-size: var(--mo-btn);
+    font-size: var(--textButton3);
     display: flex;
     gap: 4px;
     align-items: center;
@@ -352,13 +354,12 @@ h2 {
 
 .visual-text {
     width: 100%;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     
     position: absolute;
-    left: 0;
+    left: 20px;
     bottom: 76px;
 }
 
@@ -371,19 +372,16 @@ h2 {
     line-height: var(--lineHeight130);
 }
 
-.slide-color-1 { 
-    color: #64594b;
-    text-shadow: 0px 0px 6px rgba(169, 151, 90, 0.2);
+.slide-color-1 {
+    color: #726A5E;
 }
 
 .slide-color-2 { 
-    color: #726A5E;
-    text-shadow: 0px 0px 6px rgba(166, 166, 138, 0.2);
+    color: #111111;
 }
 
 .slide-color-3 { 
     color: #ffffff;
-    text-shadow: 0px 0px 6px rgba(17, 17, 17, 0.3);
 }
 
 
@@ -416,7 +414,7 @@ h2 {
 }
 
 .main-visual > .swiper > .swiper-pagination {
-    padding: 0 20px;
+    margin-left: 20px;
     bottom: 32px;
     max-width: 1520px;
     left: 0;
@@ -427,21 +425,20 @@ h2 {
     width: 33.333%;
     margin: 0;
     border-radius: 0;
-    height: 2px;
+    height: 3px;
     
 }
 .main-visual > .swiper > .swiper-pagination > .swiper-pagination-bullet-active {
     background-color: var(--color-main-blk);
 }
 
-@media (min-width: 674px) {
-    .visual-title {
-        flex-direction: row;
-        gap: 12px;
-    }
-}
-
 @media (min-width: 1024px) {
+    .visual-text {
+        gap: 16px;
+        left: 180px;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
 
     .visual-bg { 
         min-height: 645px;
@@ -449,25 +446,15 @@ h2 {
         aspect-ratio: 24/11;
     }
 
-    .visual-text {
-        left: 200px;
-        bottom: 50%;
-        transform: translateY(50%);
-    }
-
-    .visual-title {
-        gap: 12px;
-    }
-
-    .visual-subtitle {
-        font-size: var(--textSubtitle2);
-        line-height: var(--line-20);
-    }
-
     .main-visual > .swiper > button {
         display: block;
     }
 
+    .main-visual > .swiper > .swiper-pagination {
+        margin-left: 180px;
+        bottom: 25%;
+        transform: translateY(25%);
+    }
 
 }
 
@@ -709,7 +696,7 @@ h2 {
     .new-viewmore {
         margin-top: 20px;
         border: 1px solid var(--color-main-blk);
-        padding: 6px 20px;
+        padding: 7px 20px;
         border-radius: 20px;
     }
 
@@ -718,16 +705,20 @@ h2 {
     }
 
     .new > .swiper > .swiper-pagination {
-        margin-top: 16px;
+        margin-top: 24px;
     }
 }
 
 @media (min-width: 1024px) {
     .detail-desc {
-    font-size: var(--textBody1);
-    line-height: var(--lineHeight140);
+        font-size: var(--textBody1);
+        line-height: var(--lineHeight140);
     }
 
+    .new > .swiper > .swiper-pagination {
+        margin-top: 32px;
+    }
+    
 }
 
 
@@ -746,8 +737,8 @@ h2 {
 }
 
 .md-desc-logo {
-    font-size: var(--mo-caption1);
-    line-height: var(--line-12);
+    font-size: var(--textCaption1);
+    line-height: var(--lineHeight145);
 }
 
 .md-text-area > div {
@@ -757,10 +748,13 @@ h2 {
 }
 
 .md-desc {
-    font-size: var(--mo-body2);
-    line-height: var(--line-14);
+    font-size: var(--textBody2);
+    line-height: var(--lineHeight145);
 }
 
+.md-title {
+    margin-bottom: 16px;
+}
 .md-title-more-btn::after {
     display: block;
     content: "";
@@ -819,13 +813,13 @@ h2 {
 }
 
 .md-slide-desc:nth-of-type(2) {
-    font-size: var(--mo-title2);
-    line-height: var(--line-16);
+    font-size: var(--textBody1);
+    line-height: var(--lineHeight145);
 }
 
 .md-slide-title {
-    font-size: var(--mo-title1);
-    line-height: var(--line-20);
+    font-size: var(--textSubtitle1);
+    line-height: var(--lineHeight140);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -836,7 +830,7 @@ h2 {
 .md .swiper > .swiper-pagination {
     display: flex;
     padding: 0 var(--mo-full-margin);
-    bottom: -20px;
+    bottom: -25px;
 }
 
 .md .swiper > .swiper-pagination > .swiper-pagination-bullet {
@@ -844,7 +838,7 @@ h2 {
     width: auto;
     margin: 0;
     border-radius: 0;
-    height: 2px;
+    height: 3px;
 }
 
 .md .swiper > .swiper-pagination > .swiper-pagination-bullet-active {
@@ -863,8 +857,8 @@ h2 {
     border-bottom: 1px solid var(--color-text-sub1);
     padding-bottom: 4px;
     margin-bottom: 8px;
-    font-size: var( --mo-caption1);
-    line-height: var(--line-12);
+    font-size: var( --textCaption1);
+    line-height: var(--lineHeight140);
     }
 }
 
@@ -875,11 +869,6 @@ h2 {
 
     }
 
-    .md-text-area {
-        width: 240px;
-        flex-shrink: 0;
-    }
-
     .md-slide-area {
         flex: 1;
         min-width: 0;
@@ -888,6 +877,7 @@ h2 {
     .md .swiper {
         position: inherit;
     }
+
     .md::after {
         content: "";
         display: block;
@@ -901,11 +891,17 @@ h2 {
     }
 
     .md-text-area {
-        margin-bottom: 0;
-        padding-top: 50px;
-        z-index: 2;
-        position: relative;
         background-color: var(--color-background);
+        position: relative;
+        margin-bottom: 0;
+        padding-bottom: 50px;
+        z-index: 2;
+
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
     }
 
     .md-text-area::before {
@@ -927,14 +923,28 @@ h2 {
         gap: 50px;
     }
    
+    .md .swiper-wrapper .more-btn-common {
+        display: flex;
+        margin-left: auto;
+        margin-top: 16px;
+    }
+
     .md .swiper > .swiper-pagination {
-        width: 27%;
+        width: 300px;
         bottom: 60px;
-        left: 0;
         z-index: 100;
     }
 }
 
+@media (min-width: 1024px) {
+    .md-text-area {
+        width: 350px;
+    }
+    
+    .md .swiper > .swiper-pagination {
+        width: 330px;
+    }
+}
 
 /* ==================== community 영역 ==================== */
 .community-title {
@@ -970,15 +980,16 @@ h2 {
 }
 
 .community-sub-title {
-    font-size: var(--mo-title1);
-    line-height: var(--line-20);
+    font-size: var(--textSubtitle1);
+    line-height: var(--lineHeight140);
     font-weight: var(--font-weight-semibold);
 }
 
 .community-desc {
-    font-size: var(--mo-body2);
-    line-height: var(--line-14);
+    font-size: var(--textBody2);
+    line-height: var(--lineHeight140);
     color: var(--color-text-sub1);
+    margin-top: 4px;
 }
 
 @media (min-width : 1024px) {
@@ -987,9 +998,6 @@ h2 {
         flex-direction: row;
     }
 
-    .community-wrap > div > a {
-        gap: 6px;
-    }
 }
 
 @media (min-width : 1320px) {
@@ -1023,9 +1031,9 @@ h2 {
 }
 
 .event-link > span:nth-of-type(1) {
-    font-size: var(--mo-body1);
-    line-height: var(--line-15);
-    margin-top: 10px;
+    font-size: var(--textBody1);
+    line-height: var(--lineHeight140);
+    margin: 12px 0 2px 0;
 }
 
 .ellipsis {
@@ -1038,7 +1046,8 @@ h2 {
 }
 
 .event-link > span:nth-of-type(2) {
-    font-size: var(--mo-caption1);
+    font-size: var(--textCaption2);
+    line-height: var(--lineHeight145);
     margin: -6px 0;
 }
 
@@ -1068,8 +1077,8 @@ h2 {
 
 .footer-menu {
     display: flex;
-    font-size: var(--mo-body2);
-    line-height: var(--line-14);
+    font-size: var(--textButton2);
+    line-height: var(--lineHeight145);
     margin: 12px 0;
 }
 
@@ -1105,16 +1114,15 @@ h2 {
 }
 
 .info2-box {
-    font-size: var(--mo-body3);
-    line-height: var(--line-13);
+    font-size: var(--textBody2);
+    line-height: var(--lineHeight145);
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
 .info3-box {
-    font-size: var(--mo-body4);
-    line-height: var(--line-12);
-    line-height: 150%;
+    font-size: var(--textBody2);
+    line-height: var(--lineHeight145);
 }
 

@@ -10,30 +10,9 @@
     --visual-title-01: #D9B179;
     --visual-desc-01: #B29264;
 
-    /* PC 폰트 사이즈 : 기준 16px */
-    --pc-heading-xl: 3rem;        /* 48px */
-    --pc-heading-lg: 1.75rem;     /* 28px */
-    --pc-nav:        1.125rem;    /* 18px */
-    --pc-body-xl:    1.5rem;      /* 24px */
-    --pc-body-lg:    1.25rem;     /* 20px */
-    --pc-btn:        1rem;        /* 16px */
-    --pc-caption-md: 0.875rem;    /* 14px */
-    --pc-caption-sm: 0.8125rem;   /* 13px */
-
     /* MO 폰트 사이즈 : 기준 16px */
-    --mo-display1:   2.5rem;      /* 40px */
-    --mo-headline:   1.75rem;     /* 28px */
-    --mo-title1:     1.25rem;     /* 20px */
     --mo-title2:     1rem;        /* 16px */
-
-    --mo-body1:      0.9375rem;   /* 15px */
-    --mo-body2:      0.875rem;    /* 14px */
-    --mo-body3:      0.8125rem;   /* 13px */
-    --mo-body4:      0.75rem;     /* 12px */
-    
     --mo-caption1:   0.75rem;     /* 12px */
-
-    --mo-btn:        0.8125rem;   /* 13px */
 
 
     /* 폰트 사이즈 수정 본 */
@@ -41,10 +20,18 @@
     
     --textTitle1: 1.75rem;       /* 28px */
 
+    --textSubtitle1: 1.25rem;     /* 20px */
     --textSubtitle2: 1rem;     /* 16px */
     --textSubtitle3: 0.875rem;      /* 14px */
 
     --textBody1: 0.9375rem;     /* 15px */
+    --textBody2: 0.875rem;      /* 14px */
+
+    --textCaption1: 0.75rem;     /* 12px */
+    --textCaption2: 0.8125rem;   /* 13px */
+    --textButton1: 1rem;        /* 16px */
+    --textButton2: 0.875rem;    /* 14px */
+    --textButton3: 0.75rem;     /* 12px */
 
 
     /* line-height 수정본 */
@@ -60,16 +47,7 @@
 
 
     /* line-height */
-    --line-40: 3.25rem;   /* 52px */
-    --line-32: 2.625rem;  /* 42px */
-    --line-28: 2.375rem;  /* 38px */
-    --line-24: 2.125rem;  /* 34px */
-    --line-20: 1.75rem;   /* 28px */
-    --line-18: 1.625rem;  /* 26px */
     --line-16: 1.5rem;    /* 24px */
-    --line-15: 1.375rem;  /* 22px */
-    --line-14: 1.25rem;   /* 20px */
-    --line-13: 1.125rem;  /* 18px */
     --line-12: 1.125rem;  /* 18px */
 
     /* radius */
@@ -90,6 +68,7 @@
         /* 폰트 사이즈 수정 본 */
         --textDisplay1: 3rem;           /* 48px */
         --textTitle1: 2rem;       /* 28px */
+        --textSubtitle1: 1.5rem;          /* 24px */
         --textSubtitle2: 1.125rem;      /* 18px */
     }
 }
@@ -102,11 +81,11 @@
         --textDisplay1: 4rem;           /* 64px */
         --textTitle1: 2.5rem;       /* 40px */
 
+        --textSubtitle1: 2rem;       /* 28px */
         --textSubtitle2: 1.5rem;      /* 24px */
         --textSubtitle3 : 1.125rem;      /* 18px */
         --textBody1: 1rem;     /* 16px */
-
-
+        --textButton3: 1rem;     /* 16px */
 
     }
 }
