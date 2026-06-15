@@ -10,12 +10,7 @@
     --visual-title-01: #D9B179;
     --visual-desc-01: #B29264;
 
-    /* MO 폰트 사이즈 : 기준 16px */
-    --mo-title2:     1rem;        /* 16px */
-    --mo-caption1:   0.75rem;     /* 12px */
-
-
-    /* 폰트 사이즈 수정 본 */
+    /* 폰트 사이즈 */
     --textDisplay1: 2rem;       /* 32px */
     
     --textTitle1: 1.75rem;       /* 28px */
@@ -34,7 +29,7 @@
     --textButton3: 0.75rem;     /* 12px */
 
 
-    /* line-height 수정본 */
+    /* line-height */
     --lineHeight130: 130%;
     --lineHeight140: 140%;
     --lineHeight145: 145%;
@@ -44,11 +39,6 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-
-
-    /* line-height */
-    --line-16: 1.5rem;    /* 24px */
-    --line-12: 1.125rem;  /* 18px */
 
     /* radius */
     --radius-20: 20px;
@@ -86,6 +76,5 @@
         --textSubtitle3 : 1.125rem;      /* 18px */
         --textBody1: 1rem;     /* 16px */
         --textButton3: 1rem;     /* 16px */
-
     }
 }
