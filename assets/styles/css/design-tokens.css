@@ -10,13 +10,13 @@
     --visual-title-01: #D9B179;
     --visual-desc-01: #B29264;
 
-    /* 폰트 사이즈 */
+    /* Font-size */
     --textDisplay1: 2rem;       /* 32px */
     
     --textTitle1: 1.75rem;       /* 28px */
 
     --textSubtitle1: 1.25rem;     /* 20px */
-    --textSubtitle2: 1rem;     /* 16px */
+    --textSubtitle2: 1.125rem;     /* 18px */
     --textSubtitle3: 0.875rem;      /* 14px */
 
     --textBody1: 0.9375rem;     /* 15px */
@@ -41,40 +41,49 @@
     --font-weight-bold: 700;
 
     /* radius */
-    --radius-20: 20px;
-    --radius-10: 10px;
+    --radius20: 20px;
+    --radius10: 10px;
 
-    /* spacing */
-    --mo-full-margin: 20px;
-    --mo-title-margin: 24px;
-    --mo-section-margin: 70px;
-    
+    /* spacing */    
+    --pageInset: 16px;
+    --sectionSpace: 70px;
+    --sectionContentSpace: 18px;
 }
 
 
 @media (min-width: 768px) {
     :root {
 
-        /* 폰트 사이즈 수정 본 */
+        /* Font-size */
         --textDisplay1: 3rem;           /* 48px */
+        
         --textTitle1: 2rem;       /* 28px */
+
         --textSubtitle1: 1.5rem;          /* 24px */
-        --textSubtitle2: 1.125rem;      /* 18px */
+        
+        /* spacing */    
+        --pageInset: 20px;
     }
 }
 
 
 @media (min-width: 1024px) {
     :root {
-
-        /* 폰트 사이즈 수정 본 */
+        
+        /* Font-size */
         --textDisplay1: 4rem;           /* 64px */
-        --textTitle1: 2.5rem;       /* 40px */
 
+        --textTitle1: 2.5rem;       /* 40px */
+        
         --textSubtitle1: 2rem;       /* 28px */
         --textSubtitle2: 1.5rem;      /* 24px */
         --textSubtitle3 : 1.125rem;      /* 18px */
+
         --textBody1: 1rem;     /* 16px */
         --textButton3: 1rem;     /* 16px */
+
+        /* spacing */    
+        --sectionSpace: 100px;
+
     }
 }

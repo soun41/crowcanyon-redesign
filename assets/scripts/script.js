@@ -250,116 +250,127 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ========== swiper 라이브러리 ========== */
     const swiperAll = document.querySelectorAll(".swiper");
-    console.log("찾은 슬라이더 : ", swiperAll.length);
     const swiperInstances = [];
 
+    // 공통옵션
     const baseOption = {
-        // 공통옵션
         observer : true,
         observerParents : true,
         observerSlideChildren : true,
+    };
+
+    function getSwiperOption(el, type) {
+
+        switch (type) {
+            case "main":
+                return {
+                    ...baseOption,
+                    loop: true,
+                    // autoplay: { delay : 3000 },
+                    // speed : 500,
+
+                    pagination: {
+                       el: el.querySelector(".swiper-pagination"),
+                    },
+
+                };
+                
+            case "category": 
+                return {
+                    ...baseOption,
+
+                    breakpoints: {
+                        0: {
+                            slidesPerView : 4,
+
+                            grid: {
+                                rows: 2,
+                                fill: "row",
+                            },
+                        },
+
+                        1024: {
+                            slidesPerView : 8,
+                            grid: {
+                                rows: 1,
+                                fill: "column",
+                            },
+                        }
+                    },
+                };
+
+            case "new":
+                return {
+                    ...baseOption,
+                    loop: false,
+                    spaceBetween: 16,
+
+                    pagination: {
+                       el: el.querySelector(".swiper-pagination"),
+                    },
+                };
+            
+            case "md":
+                return {
+                    ...baseOption,
+                    loop: true,
+                    spaceBetween: 16,
+                    autoplay: { delay : 3000 },
+                    speed : 500,
+                    slidesPerView : 1,
+
+                    pagination: {
+                       el: el.querySelector(".swiper-pagination"),
+                    },
+                    
+                    
+                    breakpoints: {
+                        768: {
+                            spaceBetween: 20,
+                            slidesPerView : "auto",
+                        },
+                    },
+                };
+
+            case "event":
+                return {
+                    ...baseOption,
+                    spaceBetween: 16,
+                    slidesPerView : 2,
+                    
+                    breakpoints: {
+                        674: {
+                            slidesPerView : 4,
+                            
+                        },
+                        1024: {
+                            spaceBetween: 20,
+                            slidesPerView : 4,
+                            initialSlide: 1,
+
+
+                        },
+                        1280: {
+                            slidesPerView : 6,
+                            initialSlide: 1,
+
+                        },
+                    },
+
+                };
+
+            default: 
+                return baseOption;
+        };
     }
 
     swiperAll.forEach(el => {
-        const dataType = el.dataset.type;
-
-        console.log("찾은 type 목록", dataType);
-
-        if(dataType === "main") {
-            option = {
-                ...baseOption,
-                loop: true,
-                // autoplay: { delay : 3000 },
-                // speed : 500,
-                pagination : { el: el.querySelector(".swiper-pagination") }
-            };
-        }
-
-        if(dataType === "category") {
-            option = {
-                ...baseOption ,
-                breakpoints: {
-                    0: {
-                        grid: {
-                            rows: 2,
-                            fill: "row",
-                        },
-
-                        slidesPerView : 4,
-                    },
-
-                    1024: {
-                        grid: {
-                            rows: 1,
-                            fill: "colum",
-                        },
-                        slidesPerView : 8,
-
-                    }
-                },
-            }
-        }
-
-        if(dataType === "new") {
-            option = {
-                ...baseOption,
-                loop: false,
-                spaceBetween: 16,
-                pagination : { el: el.querySelector(".swiper-pagination") }
-            };
-        }
-
-        if(dataType === "md") {
-            option = {
-                ...baseOption,
-                loop: true,
-                spaceBetween: 16,
-                // autoplay: { delay : 3000 },
-                // speed : 500,
-                // slidesPerView : 1,
-                
-                breakpoints: {
-                    768: {
-                        spaceBetween: 20,
-                        slidesPerView : "auto",
-                    },
-                },
-
-                pagination : { el: el.querySelector(".swiper-pagination") },
-            };
-
-        };
-
-        if(dataType === "event") {
-            option = {
-                ...baseOption,
-                spaceBetween: 16,
-                slidesPerView : 2,
-                
-                breakpoints: {
-                    674: {
-                        slidesPerView : 4,
-                        
-                    },
-                    1024: {
-                        spaceBetween: 20,
-                        slidesPerView : 4,
-                        initialSlide: 1,
-
-
-                    },
-                    1320: {
-                        slidesPerView : 6,
-                        initialSlide: 1,
-
-                    }
-                }
-            };
-        }
-
+        const option = getSwiperOption(el, el.dataset.type);
         const instance = new Swiper(el, option);
         swiperInstances.push(instance);
     });
+
+
 
     window.addEventListener('resize', () => {
         swiperInstances.forEach(sw => sw.update());
