@@ -315,8 +315,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     ...baseOption,
                     loop: true,
                     spaceBetween: 16,
-                    autoplay: { delay : 3000 },
-                    speed : 500,
+                    // autoplay: { delay : 3000 },
+                    // speed : 500,
                     slidesPerView : 1,
 
                     pagination: {
@@ -335,10 +335,13 @@ document.addEventListener("DOMContentLoaded", () => {
             case "event":
                 return {
                     ...baseOption,
-                    spaceBetween: 16,
-                    slidesPerView : 2,
                     
                     breakpoints: {
+                        0: {
+                            spaceBetween: 16,
+                            slidesPerView : 2,
+                            
+                        },
                         674: {
                             slidesPerView : 4,
                             
@@ -348,11 +351,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             slidesPerView : 4,
                             initialSlide: 1,
 
-
-                        },
-                        1280: {
-                            slidesPerView : 6,
-                            initialSlide: 1,
 
                         },
                     },

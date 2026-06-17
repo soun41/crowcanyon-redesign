@@ -292,7 +292,7 @@ html.lock-scroll {
     padding: 48px var(--pageInset);
 }
 
-.event .swiper, .md .swiper {
+.md .swiper {
     overflow: visible;
 }
 
@@ -327,7 +327,32 @@ h2 {
     height: 20px;
 }
 
+/* -------------------- prev next button 공통 영역 -------------------- */
+.swiper > .swiper-button-prev {
+    background: url(../../images/icons/ic-prev.svg) center/contain no-repeat;
+    margin-left: 20px;
+}
 
+.swiper > .swiper-button-next {
+    background: url(../../images/icons/ic-next.svg) center/contain no-repeat;
+    margin-right: 20px;
+}
+
+.swiper > button {
+    width: 45px;
+    height: 45px;
+}
+
+.swiper > button {
+    display: none;
+}
+
+@media (min-width:1024px) {
+
+    .swiper > button {
+        display: block;
+    }
+}
 
 /* ==================== main-visual 영역 ==================== */
 .visual-bg {
@@ -377,10 +402,6 @@ h2 {
 }
 
 .main-visual > .swiper > button {
-    display: none;
-    
-    width: 45px;
-    height: 45px;
     opacity: 0.6;
 }
 
@@ -388,15 +409,6 @@ h2 {
     opacity: 1;
 }
 
-.main-visual > .swiper > .swiper-button-prev {
-    background: url(../../images/icons/ic-prev.svg) center/contain no-repeat;
-    margin-left: 20px;
-}
-
-.main-visual > .swiper > .swiper-button-next {
-    background: url(../../images/icons/ic-next.svg) center/contain no-repeat;
-    margin-right: 20px;
-}
 
 .main-visual > .swiper > .swiper-pagination {
     margin-left: 20px;
@@ -431,10 +443,6 @@ h2 {
         transform: translateY(50%);
     }
 
-    .main-visual > .swiper > button {
-        display: block;
-    }
-
     .main-visual > .swiper > .swiper-pagination {
         margin-left: 180px;
         bottom: 25%;
@@ -457,7 +465,7 @@ h2 {
 }
 
 .category-link > span {
-    font-size: var(--textBody2);
+    font-size: var(--textBody1);
     line-height: var(--lineHeight145);
     padding: 14px 0;
 }
@@ -701,9 +709,6 @@ h2 {
     max-width: 1520px;
 
 }
-.md-text-area {
-    margin-bottom: var(--sectionContentSpace);
-}
 
 .md-desc-logo {
     font-size: var(--textBody2);
@@ -777,7 +782,7 @@ h2 {
 }
 
 .md-slide-desc:nth-of-type(2) {
-    font-size: var(--textBody1);
+    font-size: var(--textSubtitle3);
     line-height: var(--lineHeight145);
 }
 
@@ -816,11 +821,12 @@ h2 {
     .md-slide-desc:first-child {
     display: flex;
     width: 100%;
-    color: var(--color-text-sub1);
-    border-bottom: 1px solid var(--color-text-sub1);
     padding-bottom: 4px;
     margin-bottom: 8px;
-    font-size: var( --textCaption1);
+
+    color: var(--color-text-sub1);
+    border-bottom: 1px solid var(--color-text-sub1);
+    font-size: var( --textBody1);
     line-height: var(--lineHeight140);
     }
 }
@@ -935,7 +941,7 @@ h2 {
 }
 
 .community-sub-title {
-    font-size: var(--textSubtitle1);
+    font-size: var(--textSubtitle2);
     line-height: var(--lineHeight140);
     font-weight: var(--font-weight-semibold);
 }
@@ -951,6 +957,14 @@ h2 {
 
     .community-wrap {
         flex-direction: row;
+    }
+
+    .community-wrap > div > a {
+        gap: 20px;
+    }
+
+    .community-img {
+        width: 60px;
     }
 
 }
@@ -975,15 +989,14 @@ h2 {
 
 
 .event-img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: var(--radius20);
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius10);
 }
 
 .event-link > span:nth-of-type(1) {
-    font-size: var(--textBody1);
-    line-height: var(--lineHeight145);
-    margin: 12px 0 2px 0;
+    font-size: var(--textSubtitle3);
+    line-height: var(--lineHeight140);
+    margin-top: 12px;
 }
 
 .ellipsis {
@@ -996,39 +1009,44 @@ h2 {
 }
 
 .event-link > span:nth-of-type(2) {
-    font-size: var(--textCaption2);
+    font-size: var(--textBody2);
     line-height: var(--lineHeight145);
-    margin: -6px 0;
 }
 
 
 
 /* ==================== footer 영역 ==================== */
 .footer {
-    padding: 32px 0;
     border-top: 1px solid #E5E5EC;
     color: var(--color-text-sub1);
 }
+
 .footer-info-box {
-    margin: 0 auto;
+    padding: 32px 0;
     max-width: 1520px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-info-box > div {
-    margin-bottom: 24px;
+    display: flex;
 }
 
-.info1-box > div {
-    display: flex;
-    gap: 4px;
+.info1-box {
     flex-direction: column;
 }
 
 .footer-menu {
+    margin: 40px 0 24px;
+
     display: flex;
-    font-size: var(--textButton2);
-    line-height: var(--lineHeight145);
-    margin: 12px 0;
+    flex-direction: row;
+    align-items: flex-start;
+
+    font-size: var(--textButton1);
+    line-height: var(--lineHeight140);
+    font-weight: var(--font-weight-semibold);
+    
 }
 
 .footer-menu > li > a {
@@ -1065,12 +1083,13 @@ h2 {
 .info2-box {
     font-size: var(--textBody2);
     line-height: var(--lineHeight145);
-    display: flex;
+
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 
 .info3-box {
+    margin-top: 32px;
     font-size: var(--textBody2);
     line-height: var(--lineHeight145);
 }

@@ -11,22 +11,20 @@
     --visual-desc-01: #B29264;
 
     /* Font-size */
-    --textDisplay1: 2rem;       /* 32px */
+    --textDisplay1:     2rem;       /* 32px */
     
-    --textTitle1: 1.75rem;       /* 28px */
+    --textTitle1:       1.75rem;    /* 28px */
 
-    --textSubtitle1: 1.25rem;     /* 20px */
-    --textSubtitle2: 1.125rem;     /* 18px */
-    --textSubtitle3: 0.875rem;      /* 14px */
+    --textSubtitle1:    1.25rem;    /* 20px */
+    --textSubtitle2:    1.125rem;   /* 18px */
+    --textSubtitle3:    1rem;       /* 16px */
 
-    --textBody1: 0.9375rem;     /* 15px */
-    --textBody2: 0.875rem;      /* 14px */
+    --textBody1:        0.9375rem;  /* 15px */
+    --textBody2:        0.875rem;   /* 14px */
 
-    --textCaption1: 0.75rem;     /* 12px */
-    --textCaption2: 0.8125rem;   /* 13px */
-    --textButton1: 1rem;        /* 16px */
-    --textButton2: 0.875rem;    /* 14px */
-    --textButton3: 0.75rem;     /* 12px */
+    --textButton1:      1rem;       /* 16px */
+    --textButton2:      0.875rem;   /* 14px */
+    --textButton3:      0.75rem;    /* 12px */
 
 
     /* line-height */
@@ -35,19 +33,19 @@
     --lineHeight145: 145%;
 
     /* font-weight */
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
+    --font-weight-regular:  400;
+    --font-weight-medium:   500;
     --font-weight-semibold: 600;
-    --font-weight-bold: 700;
+    --font-weight-bold:     700;
 
     /* radius */
     --radius20: 20px;
     --radius10: 10px;
 
     /* spacing */    
-    --pageInset: 16px;
-    --sectionSpace: 70px;
-    --sectionContentSpace: 18px;
+    --pageInset:            16px;
+    --sectionSpace:         70px;
+    --sectionContentSpace:  18px;
 }
 
 
@@ -55,12 +53,13 @@
     :root {
 
         /* Font-size */
-        --textDisplay1: 3rem;           /* 48px */
-        
-        --textTitle1: 2rem;       /* 28px */
+        --textDisplay1:     3rem;       /* 48px */
 
-        --textSubtitle1: 1.5rem;          /* 24px */
-        
+        --textTitle1:       2rem;       /* 28px */
+
+        --textBody1:        1rem;       /* 16px */
+        --textBody2:        0.9375rem;  /* 15px */
+
         /* spacing */    
         --pageInset: 20px;
     }
@@ -71,19 +70,27 @@
     :root {
         
         /* Font-size */
-        --textDisplay1: 4rem;           /* 64px */
-
-        --textTitle1: 2.5rem;       /* 40px */
+        --textDisplay1:     4rem;       /* 64px */
         
-        --textSubtitle1: 2rem;       /* 28px */
-        --textSubtitle2: 1.5rem;      /* 24px */
-        --textSubtitle3 : 1.125rem;      /* 18px */
-
-        --textBody1: 1rem;     /* 16px */
-        --textButton3: 1rem;     /* 16px */
-
+        --textTitle1:       2.5rem;     /* 40px */
+        
+        --textSubtitle1:    2rem;       /* 28px */
+        --textSubtitle2:    1.5rem;     /* 24px */
+        --textSubtitle3 :   1.125rem;   /* 18px */
+        
+        --textButton3:      1rem;       /* 16px */
+        
         /* spacing */    
         --sectionSpace: 100px;
+        
+    }
+}
 
+@media (min-width: 1280px) {
+    :root {
+        --textTitle1:       48px;     /* 40px */
+        --textButton1:      1.125rem;   /* 18px */
+
+        
     }
 }
