@@ -2,6 +2,13 @@ html {
     scrollbar-gutter: stable;
 }
 
+body {
+  color: var(--color-main-blk);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body.lock-scroll, 
 html.lock-scroll {
     overflow: hidden;
@@ -17,12 +24,8 @@ html.lock-scroll {
     top: 0;
 
     background: #ffffff;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.header:hover, .header.is-scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .header-dim {
@@ -31,7 +34,7 @@ html.lock-scroll {
     background-color: rgba(0, 0, 0, 0.2);
 
     display: none;
-    transition: background 2s ease-in;
+    transition: background 200ms ease-in-out;
 }
 
 .header-dim.mo-open {
@@ -200,20 +203,25 @@ html.lock-scroll {
 @media (min-width: 1024px) {
     .header {
         background: transparent;
-        
+        box-shadow: none;
+    }
+
+    .header:hover, .header.is-scrolled {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .header::before {
         content: "";
         display: block;
         position: absolute;
-        top: 86px;
+        top: 80px;
         right: 0;
         left: 0;
         bottom: 0;
         background-color: rgba(255, 255, 255, 0.95);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out;
 
         width: 100vw;
         height: 0;
@@ -231,6 +239,7 @@ html.lock-scroll {
         padding: 0 0 0 40px;
     }
 
+    /* MO전용 */
     .gnb-mobile-auth {
         display: none;
     }
@@ -248,6 +257,7 @@ html.lock-scroll {
         padding-right: 25px;
     }
 
+    /* MO전용 */
     .gnb-2depth-btn::after {
         display: none;
     }
@@ -260,13 +270,12 @@ html.lock-scroll {
     }
 
     .gnb-2depth > li:last-of-type {
-    margin-bottom: 50px;
+        margin-bottom: 50px;
     }
-    
-    .search-form > input, .myinfo {
-    display: block;
-    }
-    
+
+
+
+
 
     /* -------------------- gnb-right 영역 -------------------- */
     .myinfo {

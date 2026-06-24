@@ -21,7 +21,7 @@ body {
 
 /* 3) Typography base */
 body {
-  color: #111;
+  color: inherit;
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const gnbNav = document.querySelector(".gnb-nav");
     const gnbMoMenu = document.querySelector(".gnb-mobile-menu");
     const gnbMoClose = document.querySelector(".gnb-mobile-close");
-
+    
+    const gnb1depth = document.querySelector('.gnb-1depth');
     const gnbItem = document.querySelectorAll('.gnb-item');
     const gnb2depth = document.querySelectorAll('.gnb-2depth-btn');
 
@@ -91,7 +92,23 @@ document.addEventListener("DOMContentLoaded", () => {
             b.children[1].style.height = 0 + 'px';
         })
     }
-    
+
+    gnb1depth.addEventListener('mouseenter', () => {
+        if(!mq1024.matches) return;
+
+        header.classList.add('active');
+        lockScroll();
+
+    });
+    header.addEventListener('mouseleave', () => {
+        if(!mq1024.matches) return;
+
+        header.classList.remove('active');
+        unlockScroll();
+
+
+    });
+    /*
     gnbItem.forEach(btn => {
         btn.addEventListener('mouseenter', () => {
             if(!mq1024.matches) return;
@@ -131,6 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         });
     });
+
+    */
 
     
     /* ========== main-visual 영역 JS ========== */
