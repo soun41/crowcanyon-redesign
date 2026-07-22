@@ -3,16 +3,37 @@ html {
 }
 
 body {
-  color: var(--color-main-blk);
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    color: var(--color-main-blk);
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+
 }
 
 body.lock-scroll, 
 html.lock-scroll {
     overflow: hidden;
 }
+
+
+/* a 링크 클릭 차단 */
+    .is-disabled {
+        pointer-events: none;
+    }
+
+/* 11) Screen reader only */
+    .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    }
 
 /* ==================== header 영역 ==================== */
 .header {
@@ -25,7 +46,6 @@ html.lock-scroll {
 
     background: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .header-dim {
@@ -58,6 +78,7 @@ html.lock-scroll {
     gap: 12px;
     align-items: center;
 }
+
 .logo > a {
     height: 36px;
     aspect-ratio: 55 / 14;
@@ -86,8 +107,8 @@ html.lock-scroll {
 
 /* 모바일 전용 메뉴 */
 .gnb-nav.mo-open {
-    transition: transform 500ms ease;
     transform: translateX(0);
+    transition: transform 500ms ease;
 }
 
 .gnb-mobile-auth {
@@ -206,30 +227,38 @@ html.lock-scroll {
         box-shadow: none;
     }
 
-    .header:hover, .header.is-scrolled {
-        background-color: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
     .header::before {
         content: "";
         display: block;
         position: absolute;
-        top: 80px;
+        top: 0;
         right: 0;
         left: 0;
-        bottom: 0;
+        
+        width: 100%;
+        opacity: 0;
+
         background-color: rgba(255, 255, 255, 0.95);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out;
-
-        width: 100vw;
-        height: 0;
+        transition: opacity 300ms ease-in-out;
+        z-index: -1;
+    }
+    
+    .header.is-scrolled::before {
+        height: 80px;
+        opacity: 1;
     }
 
     .header.active::before {
-        height: 300px;
+        height: 460px;
+        opacity: 1;
     }
+
+    .header.active.is-scrolled::before {
+        height: 460px;
+        opacity: 1;
+    }
+
     
     .gnb-nav {
         background-color: transparent;
@@ -257,15 +286,15 @@ html.lock-scroll {
         padding-right: 25px;
     }
 
-    /* MO전용 */
+    /* PC */
     .gnb-2depth-btn::after {
         display: none;
     }
 
     .gnb-2depth {
-        font-size: 16px;
         transition: none;
         position: absolute;
+        overflow: hidden;
         padding-top: 4px;
     }
 
@@ -275,9 +304,8 @@ html.lock-scroll {
 
 
 
-
-
     /* -------------------- gnb-right 영역 -------------------- */
+
     .myinfo {
         display: block;
     }
@@ -315,7 +343,7 @@ h2 {
 }
 
 @media (min-width: 1024px) {
-    .h2 { 
+    h2 { 
         line-height: var(--lineHeight130);
     }
 }
@@ -337,15 +365,6 @@ h2 {
 }
 
 /* -------------------- prev next button 공통 영역 -------------------- */
-.swiper > .swiper-button-prev {
-    background: url(../../images/icons/ic-prev.svg) center/contain no-repeat;
-    margin-left: 20px;
-}
-
-.swiper > .swiper-button-next {
-    background: url(../../images/icons/ic-next.svg) center/contain no-repeat;
-    margin-right: 20px;
-}
 
 .swiper > button {
     width: 45px;
@@ -356,12 +375,30 @@ h2 {
     display: none;
 }
 
-@media (min-width:1024px) {
+.swiper-button-prev {
+    background: url(../../images/icons/ic-prev.svg) center/contain no-repeat;
+    margin-left: 20px;
+}
 
+.swiper-button-next {
+    background: url(../../images/icons/ic-next.svg) center/contain no-repeat;
+    margin-right: 20px;
+}
+
+/* Swiper 기본 화살표 제거 */
+.swiper-button-prev::after,
+.swiper-button-next::after,
+.swiper-button-prev svg,
+.swiper-button-next svg {
+    display: none;
+}
+
+@media (min-width:1024px) {
     .swiper > button {
         display: block;
     }
 }
+
 
 /* ==================== main-visual 영역 ==================== */
 .visual-bg {
@@ -617,13 +654,13 @@ h2 {
     bottom: 0;;
 }
 
-.new > .swiper > .swiper-pagination-bullet {
+.new > .swiper .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
     border-radius: 50%;
 }
 
-.new > .swiper > .swiper-pagination > .swiper-pagination-bullet-active {
+.new > .swiper > .swiper-pagination-bullet-active {
     background-color: var(--color-main-blk);
 }
 
@@ -859,7 +896,7 @@ h2 {
         content: "";
         display: block;
         position: absolute;
-        width: 100vw;
+        width: 100%;
         height: 100%;
         top: 0;
         left: 50%;
